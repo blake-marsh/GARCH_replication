@@ -221,12 +221,14 @@ def __loglike__(parms, series, c, ar, knots, full_output=False):
 
     # log likelihood
     logliks = 0.5*(np.log(2*pi)+np.log(ht)+(e2/ht))
-    #loglik = logliks.sum()
+    loglik = logliks.sum()
     
-    if isnan(logliks.sum()) or isinf(logliks.sum()):
-        loglik = 1E10
-    else:
-        loglik = logliks.sum()
+    #if isnan(logliks.sum()) or isinf(logliks.sum()):
+    #    loglik = 1E10
+    #else:
+    #    loglik = logliks.sum()
+    
+    #print loglik
 
     if full_output == True:
         return -loglik, logliks, e, tau, gt, ht, T
@@ -247,7 +249,7 @@ result = minimize(__loglike__, x0=x0, method='SLSQP',\
                   args = (np.array(nasdaq_rtn), 1, [1], 2)) ## Sequential Least Sq
 
 #result = fmin_slsqp(__loglike__, x0=x0, full_output=True, \
- #                 args = (np.array(nasdaq_rtn), 1, [1], 2)) ## main SLSQP function
+#                  args = (np.array(nasdaq_rtn), 1, [1], 2)) ## main SLSQP function
 
 
 # recover the components

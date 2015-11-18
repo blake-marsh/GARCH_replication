@@ -157,12 +157,15 @@ def __loglike__(parms, series, knots, full_output=False):
 
     # log likelihood
     logliks = 0.5*(np.log(2*pi)+np.log(ht)+(e2/ht))
+    loglik = logliks.sum()
     
-    if isnan(logliks.sum()) or isinf(logliks.sum()):
-        loglik = 1.0E10
-    else:
-        loglik = logliks.sum()
-
+    #if isnan(logliks.sum()) or isinf(logliks.sum()):
+    #    loglik = 1.0E10
+    #else:
+    #    loglik = logliks.sum()
+    
+    #print loglik
+    
     if full_output == True:
         return -loglik, logliks, e, tau, gt, ht, T
 
