@@ -16,7 +16,7 @@ Three models are estimated:
   * The Spline-GARCH model of Engle and Rangel (2008).  The benchmark models
     come from the OxMetrics 7.0 documentation and the Engle and Rangel paper.
 
-  * The MIDAS-GARCH model of Engle, Rangel, and Sohn (2013). The benchmark is 
+  * The GARCH-MIDAS model of Engle, Rangel, and Sohn (2013). The benchmark is 
     the matlab code provided by the authors at the Review of Economic Statistics.
 
 Most models calculate Bollerslev-Wooldridge (1992) standard errors unless otherwise noted.
@@ -24,7 +24,7 @@ Most models calculate Bollerslev-Wooldridge (1992) standard errors unless otherw
 To run the code:
  All the datasets are included. Some programs require the sas7bdat package to load the data.
  The code should be self contained with all functions and output in a single file.
- The MIDAS-GARCH package requires the intnx function included in intnx.py
+ The GARCH-MIDAS package requires the intnx function included in intnx.py.
 
 garch_11.py runs the GARCH(1,1) model
 
@@ -32,7 +32,7 @@ spgarch_er.py runs the Spline-GARCH model of Engle and Rangel (2008) on daily S&
 
 spgarch_ox.py runs the Spline-GARCH model for Nasdaq data from Laurent (2012).
 
-midas_garch_egs.py runs the MIDAS-GARCH model for fixed window regressions on daily S&P 500 returns
+midas_garch_egs.py runs the GARCH-MIDAS model for fixed window regressions on daily S&P 500 returns
 
 
 
@@ -51,7 +51,7 @@ Engle, Robert, Eric Ghysels and Bumjean Sohn (2013). "Stock Market Volatility an
   Fundamentals." Review of Economics and Statistics 95(3), pp. 776-797.
 
 Engle, Robert and Jose Gonzalo Rangel (2008). "The Spline-GARCH Model for Low-Frequency Volatility 
-  and Its Global Macroeconomic Causes."     Review of Financial Studies 21(3), pp. 1187-1222.
+  and Its Global Macroeconomic Causes." Review of Financial Studies 21(3), pp. 1187-1222.
 
 Fiorentini, Gabriele, Giorgio Calzolari and Lorenzo Panattoni (1996). "Analytic Derivatives and 
   the Computation of GARCH Estimates." Journal of Applied Econometrics 11(4), pp. 399-417.
